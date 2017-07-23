@@ -1,0 +1,16 @@
+#post geting the chef repo folder copy it in to a workstation and run the below
+
+1.Installing chef DK
+curl https://omnitruck.chef.io/install.sh | sudo bash -s -- -P chefdk -c stable -v 0.18.30   -- will install chef dk
+
+============Run it in workstation to register it to the chef server
+knife ssl fetch
+knife ssl check
+
+
+#command to install the checf client on the node
+knife bootstrap 192.168.1.17 --ssh-user root --ssh-password 'Jithu@123' --sudo --use-sudo-password --node-name cnode2 --run-list 'recipe[learn_chef_apache2]
+
+knife bootstrap <nodeip> --ssh-user <username> --ssh-password <'password'> --sudo --use-sudo-password --node-name <nodebame> --run-list 'recipe[learn_chef_apache2]'
+
+#installing git
