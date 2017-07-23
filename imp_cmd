@@ -14,3 +14,12 @@ knife bootstrap 192.168.1.17 --ssh-user root --ssh-password 'Jithu@123' --sudo -
 knife bootstrap <nodeip> --ssh-user <username> --ssh-password <'password'> --sudo --use-sudo-password --node-name <nodebame> --run-list 'recipe[learn_chef_apache2]'
 
 #installing git
+
+ yum install git
+ git commit -m "first commit"
+ git remote add origin https://github.com/jithendragowda/chef_server.git
+ git config --global user.name "jithendragowda"
+ git config --global user.email "jithendra2008@outlook.com"
+ git commit -m "first commit"
+ git push origin master
+
